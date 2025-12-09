@@ -93,41 +93,27 @@ body {
   font-weight: 300;
 }
 
-.start-button {
-  background: transparent;
-  color: var(--color-white);
-  border: 1px solid var(--color-accent);
-  padding: 1.2rem 3rem;
-  font-size: 1rem;
-  font-weight: 400;
+/* Scroll Indicator */
+.scroll-indicator {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.scroll-arrow {
+  color: var(--color-accent);
+  opacity: 0.8;
+}
+
+.scroll-text {
+  font-size: 0.9rem;
+  color: var(--color-accent);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.25, 0.4, 0.25, 1);
-  font-family: 'Poppins', sans-serif;
-  position: relative;
-  overflow: hidden;
-}
-
-.start-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: var(--color-accent);
-  transition: left 0.4s cubic-bezier(0.25, 0.4, 0.25, 1);
-  z-index: -1;
-}
-
-.start-button:hover::before {
-  left: 0;
-}
-
-.start-button:hover {
-  color: var(--color-primary);
-  border-color: var(--color-accent);
+  font-weight: 300;
+  opacity: 0.8;
 }
 
 .particles {
@@ -663,9 +649,12 @@ body {
     margin-bottom: 3rem;
   }
 
-  .start-button {
-    padding: 1rem 2.5rem;
-    font-size: 0.9rem;
+  .scroll-indicator {
+    margin-top: 2rem;
+  }
+
+  .scroll-text {
+    font-size: 0.8rem;
   }
 
   .music-player {

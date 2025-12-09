@@ -60,12 +60,22 @@ Open the website and you should see the music player in the bottom-right corner!
 ## Music Player Features
 
 ### Controls Available:
-- ✅ **Play/Pause** - Click the gold button
+- ✅ **Auto-Play** - Music attempts to start automatically after welcome screen
+- ✅ **Play/Pause** - Click the gold button to control playback
 - ✅ **Volume Control** - Hover over speaker icon
 - ✅ **Progress Bar** - Shows current position in song
 - ✅ **Time Display** - Shows elapsed/total time
 - ✅ **Auto Loop** - Song repeats automatically
 - ✅ **Animated Waves** - Visual indicator when playing
+
+### Browser Autoplay Policy:
+⚠️ **Important**: Modern browsers (Chrome, Safari, Firefox) have strict autoplay policies:
+- **May work**: On desktop after user has interacted with the site before
+- **Usually blocked**: On mobile devices and first-time visits
+- **Fallback**: If blocked, user can click the play button to start music
+- **Why**: Browsers prevent websites from auto-playing sound without user permission
+
+The website will **try** to autoplay, but if the browser blocks it, the play button will be ready for the user to click.
 
 ### Design:
 - **Position**: Fixed bottom-right corner
@@ -111,12 +121,22 @@ If your file isn't in MP3 format:
 4. **Browser console**: Look for audio loading errors
 5. **Volume**: Make sure it's not muted in the player
 
-### Browser Autoplay Restrictions?
+### Music Doesn't Autoplay?
 
-Modern browsers block autoplay. The music will start when user:
-- Clicks the play button
-- Clicks anywhere on the page (after welcome screen)
-- Interacts with the website
+This is normal browser behavior for user protection:
+
+**Expected behavior:**
+1. Site loads → Welcome screen shows (5 seconds)
+2. Main content appears → Music tries to autoplay
+3. If browser allows it → Music starts automatically ✅
+4. If browser blocks it → User clicks play button 🎵
+
+**To increase autoplay success:**
+- Visit the site on desktop browsers (better autoplay support)
+- Once you've interacted with the site, refreshing will often allow autoplay
+- On mobile: User will almost always need to tap play (browser restriction)
+
+**This is a feature, not a bug!** It prevents annoying auto-playing ads and respects user preferences.
 
 ### File Size Too Large?
 

@@ -80,9 +80,11 @@ vercel
 
 ## How to Use the Website
 
+- **Auto-Start**: Welcome screen automatically transitions after 5 seconds
+- **Auto-Play Music**: Music attempts to start automatically (browser-dependent)
 - **Scroll Down**: Images and messages appear with smooth animations
 - **Color Magic**: Background color smoothly transitions to match each image's palette
-- **Music Player**: Click play button in bottom-right to start/pause music
+- **Music Player**: Control music with play/pause button in bottom-right
 - **Volume Control**: Hover over speaker icon to adjust volume
 - **Alternating Layout**: Images alternate between left and right sides
 - **Progress Bar**: Top of page shows scroll progress

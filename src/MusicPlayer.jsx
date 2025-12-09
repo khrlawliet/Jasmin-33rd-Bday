@@ -28,6 +28,31 @@ function MusicPlayer() {
     }
   }, [])
 
+  // Autoplay music when component mounts
+  useEffect(() => {
+    const audio = audioRef.current
+    if (!audio) return
+
+    // Set initial volume
+    audio.volume = volume
+
+    // Small delay to ensure component is fully mounted
+    const playTimer = setTimeout(() => {
+      audio.play()
+        .then(() => {
+          setIsPlaying(true)
+          console.log('Music started automatically')
+        })
+        .catch(err => {
+          console.log('Autoplay prevented by browser. User must click play:', err)
+          // Browser blocked autoplay - user will need to click play button
+          setIsPlaying(false)
+        })
+    }, 500)
+
+    return () => clearTimeout(playTimer)
+  }, [])
+
   const togglePlay = () => {
     const audio = audioRef.current
     if (!audio) return
