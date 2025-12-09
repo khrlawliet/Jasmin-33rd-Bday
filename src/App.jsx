@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { motion, useScroll, useTransform, animate } from 'framer-motion'
 import { imageData } from './imageData'
 import ColorThief from 'colorthief'
+import MusicPlayer from './MusicPlayer'
 
 function App() {
   const [showWelcome, setShowWelcome] = useState(true)
@@ -137,6 +138,9 @@ function App() {
         className="progress-bar"
         style={{ scaleX: scrollYProgress }}
       />
+
+      {/* Music Player */}
+      <MusicPlayer />
 
       {/* Main Content - Scrollable Gallery */}
       <main className="gallery">

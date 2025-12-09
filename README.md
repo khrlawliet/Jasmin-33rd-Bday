@@ -6,6 +6,7 @@ A sophisticated, minimalist single-page birthday greeting website built with Rea
 
 - 🎨 Minimalist, sophisticated design
 - 🌈 **Dynamic background colors** - automatically adapts to each image's color palette
+- 🎵 **Background music player** - elegant controls with play/pause, volume, and progress
 - 📜 Scroll-based storytelling experience
 - ↔️ Alternating left/right image and message layout
 - ✨ Smooth scroll-triggered animations (Framer Motion)
@@ -37,7 +38,11 @@ npm install
 npm run dev
 ```
 
-3. Open your browser and visit the URL shown in the terminal (usually `http://localhost:5173`)
+3. **(Optional) Add background music**:
+   - See [MUSIC.md](MUSIC.md) for detailed instructions
+   - Quick: Place an MP3 file named `birthday-song.mp3` in `public/music/`
+
+4. Open your browser and visit the URL shown in the terminal (usually `http://localhost:5173`)
 
 ## Build for Production
 
@@ -77,6 +82,8 @@ vercel
 
 - **Scroll Down**: Images and messages appear with smooth animations
 - **Color Magic**: Background color smoothly transitions to match each image's palette
+- **Music Player**: Click play button in bottom-right to start/pause music
+- **Volume Control**: Hover over speaker icon to adjust volume
 - **Alternating Layout**: Images alternate between left and right sides
 - **Progress Bar**: Top of page shows scroll progress
 - **Hover Effects**: Images zoom slightly on hover
@@ -87,12 +94,16 @@ vercel
 ```
 jasmin-33rd-bday/
 ├── public/
-│   └── images/         # 33 photos (served from root)
+│   ├── images/         # 33 photos (served from root)
+│   └── music/          # Background music (optional)
+│       └── birthday-song.mp3
 ├── src/
 │   ├── App.jsx         # Main app component with scroll animations
 │   ├── App.css         # Minimalist styling
+│   ├── MusicPlayer.jsx # Music player component
 │   ├── imageData.js    # Image paths and messages
 │   └── main.jsx        # React entry point
+├── MUSIC.md            # Music setup instructions
 ├── index.html          # HTML template
 ├── package.json        # Dependencies
 ├── vite.config.js      # Vite configuration
