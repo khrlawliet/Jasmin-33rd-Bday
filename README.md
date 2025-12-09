@@ -86,7 +86,8 @@ vercel
 
 ```
 jasmin-33rd-bday/
-├── images/              # 33 photos
+├── public/
+│   └── images/         # 33 photos (served from root)
 ├── src/
 │   ├── App.jsx         # Main app component with scroll animations
 │   ├── App.css         # Minimalist styling
